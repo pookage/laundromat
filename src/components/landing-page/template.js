@@ -8,14 +8,14 @@ template.innerHTML = `
 		<nav class="${s.links}">
 			<text-links
 				listen="//linktr.ee/laundromat"
-				live="https://www.songkick.com/artists/10085310-laundromat-uk"
-				store="">
-			</text-links>
+				live="//songkick.com/artists/10085310-laundromat-uk"
+				store=""
+			></text-links>
 			<social-links
 				instagram="//instagram.com/laundromat__/"
 				facebook="//facebook.com/laundromatmusica/"
-				twitter="//twitter.com/LAUNDROMAT__">
-			</social-links>
+				twitter="//twitter.com/LAUNDROMAT__"
+			></social-links>
 		</nav>
 		<background-video
 			id="video__background"
@@ -25,11 +25,9 @@ template.innerHTML = `
 			landscape-small="assets/video/LAUNDROMAT_SITE_LOOP_720.mp4"
 			landscape-large="assets/video/LAUNDROMAT_SITE_LOOP_1080.mp4"
 			poster-small="assets/images/poster__portrait.jpg"
-			poster-large="assets/images/poster__landscape.jpg">
-		</background-video>
-		<mute-toggle
-			active="true">
-		</mute-toggle>
+			poster-large="assets/images/poster__landscape.jpg"
+		></background-video>
+		<mute-toggle></mute-toggle>
 	</div>
 `;
 

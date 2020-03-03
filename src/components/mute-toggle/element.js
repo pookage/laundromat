@@ -8,6 +8,9 @@ class MuteToggle extends HTMLElement {
 	#ELEMENT;
 	#BUTTON;
 
+	// config
+	#MUTE   = "Mute";
+	#UNMUTE = "Unmute";
 
 	// LIFECYCLE JAZZ
 	// -------------------------
@@ -36,7 +39,7 @@ class MuteToggle extends HTMLElement {
 		event.preventDefault();
 
 		const muted = !state.muted;
-		const label = muted ? "Unmute" : "Mute";
+		const label = muted ? this.#UNMUTE : this.#MUTE;
 
 		state.muted = muted;
 

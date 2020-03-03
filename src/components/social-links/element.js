@@ -31,8 +31,6 @@ class SocialLinks extends HTMLElement {
 
 		for(let { name, value } of attributes){
 
-			console.log({ name, value })
-
 			// generate clone and get dom elements
 			const clone    = document.importNode(item.content, true);
 			const linkItem = clone.querySelector(`.${s.item}`);

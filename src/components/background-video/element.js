@@ -44,10 +44,13 @@ class BackgroundVideo extends HTMLElement {
 
 		// add event listeners
 		window.addEventListener("resize", this.debouncedVideoUpdate);
+
+		this.#VIDEO.addEventListener("canplaythrough", () => this.#VIDEO.play());
 	}// constructor
 
 	connectedCallback(){
 		this.appendChild(this.#ELEMENT);
+		this.#VIDEO.muted = true;
 	}// connectedCallback
 
 	disconnectedCallback(){
@@ -55,7 +58,6 @@ class BackgroundVideo extends HTMLElement {
 	}// disconnectedCallback 
 
 	attributeChangedCallback(attribute, prev, next){
-
 		const isRemoved = next === null;
 
 		switch(attribute){
@@ -69,7 +71,6 @@ class BackgroundVideo extends HTMLElement {
 			case "muted": {
 				const muted = !isRemoved && next !== "false";
 				this.#VIDEO.muted = muted;
-				console.log({ muted, next })
 				break;
 			}
 

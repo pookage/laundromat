@@ -2,13 +2,19 @@
 	display: inline-block;
 	border: none;
 	position: absolute;
-	top: 1em;
-	right: 1em;
+	top: 1rem;
+	right: 1rem;
 	background-color: transparent;
 	transform-origin: right center;
 	appearance: none;
 	-webkit-apperance: none;
 	&:focus {
 		outline: 0;
+	}
+}
+
+@media(min-width: 1025px){
+	.wrapper {
+		font-size: 0.62em;
 	}
 }
