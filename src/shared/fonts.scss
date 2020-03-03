@@ -1,0 +1,18 @@
+:root {
+	--font_family__body: tgn-soft-round, sans-serif;
+	--font_weight__body: 800;
+}
+
+body {
+	font-size: 2vw;
+}
+
+@media(min-width: 768px){
+	
+}
+
+@media(min-width: 1025px){
+	body {
+		font-size: 20px;
+	}
+}
