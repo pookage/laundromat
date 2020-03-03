@@ -1,4 +1,5 @@
 import * as UTILS from "SHARED/utils.js";
+import STATE from "SHARED/state.js";
 import { s, template } from "./";
 
 class BackgroundVideo extends HTMLElement {
@@ -32,11 +33,14 @@ class BackgroundVideo extends HTMLElement {
 		// scope binding
 		this.updateVideo          = this.updateVideo.bind(this);
 		this.debouncedVideoUpdate = UTILS.debounce.bind(this, this.updateVideo);
+		this.updateMuted          = this.updateMuted.bind(this);
 
 		// dom stuff
 		const clone = this.#ELEMENT = document.importNode(template.content, true);
 		const video = this.#VIDEO   = clone.querySelector(`.${s.wrapper}`);
 		const state = this.#STATE   = { ...this.#INITIAL_STATE };
+
+		STATE.subscribe("muted", this.updateMuted);
 
 		// add event listeners
 		window.addEventListener("resize", this.debouncedVideoUpdate);
@@ -58,11 +62,17 @@ class BackgroundVideo extends HTMLElement {
 			case "id":
 			case "poster":
 			case "autoplay":
-			case "muted":
 			case "loop":
 				if(isRemoved) this.#VIDEO.removeAttribute(attribute);
 				else          this.#VIDEO.setAttribute(attribute, next);
 				break;
+
+			case "muted": {
+				const muted = !isRemoved && next !== "false";
+				this.#VIDEO.muted = muted;
+				console.log({ muted, next })
+				break;
+			}
 
 			case "playsinline":
 				if(isRemoved){
@@ -106,9 +116,6 @@ class BackgroundVideo extends HTMLElement {
 	// EVENT HANDLER
 	// ----------------------------------
 	updateVideo(){
-
-		console.log("update video!")
-
 		const { 
 			innerWidth, 
 			innerHeight 
@@ -143,6 +150,10 @@ class BackgroundVideo extends HTMLElement {
 			this.#VIDEO.setAttribute("poster", poster);
 		}
 	}// updateVideo
+
+	updateMuted(key, value){
+		this.setAttribute("muted", value)
+	}// updateMuted
 
 };// BackgroundVideo
 

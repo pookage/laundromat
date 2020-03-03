@@ -1,0 +1,15 @@
+.wrapper {
+	list-style-type: none;
+}
+	.item {
+		display: inline-block;
+		& + .item {
+			margin-left: 1.62em;
+		}
+	}
+		.link {
+			&[aria-disabled="true"]{
+				opacity: 0.5;
+				pointer-events: none;
+			}
+		}

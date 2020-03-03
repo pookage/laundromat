@@ -1,0 +1,21 @@
+:root {
+	--color__white: #fff;
+	--color__black: #000;
+	
+	--color__text__light: var(--color__white);
+
+	--shadow__distance: 0.2rem;
+	--shadow__text_shadow: drop-shadow(0 var(--shadow__distance) var(--color__black));
+	--shadow__text_shadow__tight: drop-shadow(0 0.15rem var(--color__black));
+
+	::selection {
+		background: #000;
+	}
+}
+
+@media(min-width: 1025px){
+	:root {
+		--shadow__distance: 0.25rem;
+	}
+}
+

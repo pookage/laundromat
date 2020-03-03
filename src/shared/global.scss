@@ -1,3 +1,21 @@
 html, body {
 	height: 100%;
 }
+
+a, button {
+	display: inline-block;
+	transition: transform .15s,
+				filter .3s;
+	&:hover {
+		cursor: pointer;
+	}
+	&:not(:active){
+		transform: scale(1);
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+	&:active {
+		transform: scale(0.95);
+	}
+}

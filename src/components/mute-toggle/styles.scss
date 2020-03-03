@@ -1,0 +1,14 @@
+.wrapper {
+	display: inline-block;
+	border: none;
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	background-color: transparent;
+	transform-origin: right center;
+	appearance: none;
+	-webkit-apperance: none;
+	&:focus {
+		outline: 0;
+	}
+}

@@ -1,10 +1,28 @@
 :root {
 	--font_family__body: tgn-soft-round, sans-serif;
 	--font_weight__body: 800;
+	--font_size__body: 1em;
+	--font_size__heading: 4.25em;
 }
 
 body {
-	font-size: 2vw;
+	font-size: 3.3vw;
+}
+
+h1, p, a, button {
+	font-family: var(--font_family__body);
+	filter: var(--shadow__text_shadow);
+	color: var(--color__text__light);
+	text-transform: uppercase;
+}
+
+button {
+	font-size: 1em;
+}
+
+a:link,
+a:visited {
+	text-decoration: none;
 }
 
 @media(min-width: 768px){
@@ -13,6 +31,6 @@ body {
 
 @media(min-width: 1025px){
 	body {
-		font-size: 20px;
+		font-size: 30px;
 	}
 }

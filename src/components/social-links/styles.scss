@@ -1,0 +1,28 @@
+.wrapper {
+	margin-top: 0.62em;
+	list-style-type: none;
+}
+	.item {
+		display: inline-block;
+		& + .item {
+			margin-left: 0.62em;
+		}
+		&.instagram .link {
+			background-image: url(assets/icons/instagram.svg);
+		}
+		&.facebook .link {
+			background-image: url(assets/icons/facebook.svg);
+		}
+		&.twitter .link {
+			background-image: url(assets/icons/twitter.svg);
+		}
+	}
+		.link {
+			display: block;
+			height: 1em;
+			width: 1em;
+			font-size: 1em;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
