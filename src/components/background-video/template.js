@@ -4,7 +4,7 @@ const template = document.createElement("template");
 
 template.innerHTML = `
 	<video
-		muted playsinline webkit-playsinline
+		autoplay muted playsinline webkit-playsinline
 		class="${s.wrapper}">
 	</video>
 `;
