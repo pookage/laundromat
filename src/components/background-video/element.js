@@ -48,6 +48,7 @@ class BackgroundVideo extends HTMLElement {
 
 	connectedCallback(){
 		this.appendChild(this.#ELEMENT);
+		this.#VIDEO.play();
 	}// connectedCallback
 
 	disconnectedCallback(){
