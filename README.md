@@ -1,5 +1,7 @@
 # LAUNDROMAT
 
+![laundromat](https://user-images.githubusercontent.com/3370135/75826661-e61c0280-5d9f-11ea-96e6-d43235ba15c4.gif)
+
 ## 1. Setup
 
 This site requires `node` and `npm` to be installed in order to build, and uses `firebase` to deploy.
