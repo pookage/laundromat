@@ -39,7 +39,7 @@ is the general component that renders everything on the landing page, and what r
 - **background-video**
 is the component in-charge of the background-video behaviour; it handles autoplay and stretching of the video etc.  
 	- To change the *source* of the video, edit the `portrait-small`, `portrait-large`, `landscape-small`, `landscape-large` attributes on the `<background-video>` in `/src/components/landing-page/template.js`.
-	- To change the *mage that displays whilst the video is loading or not playing*, change the `poster-small` and `poster-large` attributes on the `<background-video>` in `/src/components/landing-page/template.js`
+	- To change the *image that displays whilst the video is loading or not playing*, change the `poster-small` and `poster-large` attributes on the `<background-video>` in `/src/components/landing-page/template.js`
 
 - **social-links**
 is the component in-charge of rendering the social-media links.
