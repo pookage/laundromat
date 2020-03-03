@@ -35,11 +35,12 @@ The site is made up of multiple smaller 'components' that can be found in `/src/
 
 - **landing-page**
 is the general component that renders everything on the landing page, and what renders all the other elements.
+	- To *change the main heading in the middle of the page*, change the `heading` attribute on the `<landing-page>` in `/src/index.html` in the format: `heading="Laundromoooooot"`
 
 - **background-video**
 is the component in-charge of the background-video behaviour; it handles autoplay and stretching of the video etc.  
-	- To change the *source* of the video, edit the `portrait-small`, `portrait-large`, `landscape-small`, `landscape-large` attributes on the `<background-video>` in `/src/components/landing-page/template.js`.
-	- To change the *image that displays whilst the video is loading or not playing*, change the `poster-small` and `poster-large` attributes on the `<background-video>` in `/src/components/landing-page/template.js`
+	- To *change the source of the video*, edit the `portrait-small`, `portrait-large`, `landscape-small`, `landscape-large` attributes on the `<background-video>` in `/src/components/landing-page/template.js`.
+	- To *change the image that displays whilst the video is loading or not playing*, change the `poster-small` and `poster-large` attributes on the `<background-video>` in `/src/components/landing-page/template.js`
 
 - **social-links**
 is the component in-charge of rendering the social-media links.
