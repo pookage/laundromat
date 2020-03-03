@@ -48,7 +48,6 @@ class BackgroundVideo extends HTMLElement {
 
 	connectedCallback(){
 		this.appendChild(this.#ELEMENT);
-		this.#VIDEO.play();
 	}// connectedCallback
 
 	disconnectedCallback(){
@@ -62,7 +61,6 @@ class BackgroundVideo extends HTMLElement {
 		switch(attribute){
 			case "id":
 			case "poster":
-			case "autoplay":
 			case "loop":
 				if(isRemoved) this.#VIDEO.removeAttribute(attribute);
 				else          this.#VIDEO.setAttribute(attribute, next);
@@ -74,16 +72,6 @@ class BackgroundVideo extends HTMLElement {
 				console.log({ muted, next })
 				break;
 			}
-
-			case "playsinline":
-				if(isRemoved){
-					this.#VIDEO.removeAttribute("playsinline");
-					this.#VIDEO.removeAttribute("webkit-playsinline");
-				} else {
-					this.#VIDEO.setAttribute("playsinline", "");
-					this.#VIDEO.setAttribute("webkit-playsinline", "");
-				}
-				break;
 
 			case "portrait-small":
 			case "portrait-large":
@@ -100,9 +88,8 @@ class BackgroundVideo extends HTMLElement {
 	static get observedAttributes(){
 		return [ 
 			"id", 
-			"autoplay",
-			"playsinline",
 			"muted",
+			"poster",
 			"loop",
 			"portrait-small",
 			"portrait-large",
@@ -148,7 +135,7 @@ class BackgroundVideo extends HTMLElement {
 		const poster = this.#STATE[posterResolution]
 		if(this.#VIDEO.src !== src){
 			this.#VIDEO.setAttribute("src", src);
-			this.#VIDEO.setAttribute("poster", poster);
+			this.setAttribute("poster", poster);
 		}
 	}// updateVideo
 

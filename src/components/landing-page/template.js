@@ -19,7 +19,7 @@ template.innerHTML = `
 		</nav>
 		<background-video
 			id="video__background"
-			autoplay playsinline muted loop
+			loop
 			portrait-small="assets/video/LAUNDROMAT_SITE_LOOP_480V.mp4"
 			portrait-large="assets/video/LAUNDROMAT_SITE_LOOP_720V.mp4"
 			landscape-small="assets/video/LAUNDROMAT_SITE_LOOP_720.mp4"
