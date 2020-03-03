@@ -95,3 +95,16 @@ Once you've made the changes and you're happy with them, you can deploy these ch
 3. Log in to firebase with `firebase login`
 4. Build the site ready for uploading with `npm run build-prod`
 5. Upload the site with `firebase deploy`
+
+## 4. Sharing your changes (optional)
+
+If you want to share the changes you've made so (ie. if you make changes and want me to have them as well).
+
+1. Create a github account at https://github.com/join
+2. Give your username to `pookage` to be added as a collaborator
+3. Once you're a collaborator, open your terminal
+4. Navigate to the project folder with `cd laundromat-site`
+5. Add all of your changes with `git add .`
+6. Describe what you've done by writing `git commit -m "changed the url of a couple social links"`
+7. Download the latest version of the site with `git pull`
+8. Upload your changes to github with `git push`
