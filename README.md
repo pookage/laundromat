@@ -25,6 +25,7 @@ This site requires `node` and `npm` to be installed in order to build, and uses 
 1. Open your terminal
 2. Copy the code by running `git clone https://github.com/pookage/laundromat-site.git`
 3. Navigate into the folder with `cd laundromat-site`
+4. Install any dependencies with `npm install`
 4. Open the folder in Finder with `open .` (including the full-stop)
 
 ## 2. Making Changes
