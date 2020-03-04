@@ -7,6 +7,7 @@ class BackgroundVideo extends HTMLElement {
 	// dom
 	#ELEMENT;
 	#VIDEO;
+	#SOURCE;
 
 	// state
 	#STATE;
@@ -36,16 +37,15 @@ class BackgroundVideo extends HTMLElement {
 		this.updateMuted          = this.updateMuted.bind(this);
 
 		// dom stuff
-		const clone = this.#ELEMENT = document.importNode(template.content, true);
-		const video = this.#VIDEO   = clone.querySelector(`.${s.wrapper}`);
-		const state = this.#STATE   = { ...this.#INITIAL_STATE };
+		const clone  = this.#ELEMENT = document.importNode(template.content, true);
+		const video  = this.#VIDEO   = clone.querySelector(`.${s.wrapper}`);
+		const source = this.#SOURCE  = clone.querySelector(`source`);
+		const state  = this.#STATE   = { ...this.#INITIAL_STATE };
 
 		STATE.subscribe("muted", this.updateMuted);
 
 		// add event listeners
 		window.addEventListener("resize", this.debouncedVideoUpdate);
-
-		this.#VIDEO.addEventListener("canplaythrough", () => this.#VIDEO.play());
 	}// constructor
 
 	connectedCallback(){
@@ -63,7 +63,6 @@ class BackgroundVideo extends HTMLElement {
 		switch(attribute){
 			case "id":
 			case "poster":
-			case "loop":
 				if(isRemoved) this.#VIDEO.removeAttribute(attribute);
 				else          this.#VIDEO.setAttribute(attribute, next);
 				break;
@@ -134,8 +133,8 @@ class BackgroundVideo extends HTMLElement {
 		// apply correct src based on resolution if changed
 		const src    = this.#STATE[resolution];
 		const poster = this.#STATE[posterResolution]
-		if(this.#VIDEO.src !== src){
-			this.#VIDEO.setAttribute("src", src);
+		if(this.#SOURCE.src !== src){
+			this.#SOURCE.setAttribute("src", src);
 			this.setAttribute("poster", poster);
 		}
 	}// updateVideo
