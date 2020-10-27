@@ -9,7 +9,7 @@ template.innerHTML = `
 			<text-links
 				listen="//linktr.ee/laundromat"
 				live="//songkick.com/artists/10085310-laundromat-uk"
-				store="//laundromatmusica.bandcamp.com/music"
+				store="//laundromatmusica.bandcamp.com/merch"
 			></text-links>
 			<social-links
 				instagram="//instagram.com/laundromat__/"
