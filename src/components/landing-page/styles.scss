@@ -23,8 +23,11 @@
 	}
 	.mailchimp {
 		display: block;
-		// position: absolute;
-		// top: 1rem;
-		// left: 1rem;
 		margin-bottom: 1em;
 	}
+
+@media(min-width: 1025px){
+	.mailchimp {
+		margin-bottom: 0.3844em
+	}
+}
