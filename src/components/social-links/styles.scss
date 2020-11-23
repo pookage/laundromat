@@ -18,6 +18,11 @@
 			left: 0.25em;
 			background-image: url(assets/icons/twitter.svg);
 		}
+		&.youtube .link {
+			position: relative;
+			left: 0.25em;
+			background-image: url(assets/icons/youtube.svg);
+		}
 	}
 		.link {
 			display: block;

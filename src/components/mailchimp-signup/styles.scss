@@ -1,0 +1,39 @@
+.container {
+	display: flex;
+	font-size: 1em;
+}
+	.email { 
+		padding: 0 0.5em;
+		border: none;
+		font-size: 1rem; 
+	}
+	.subscribe { 
+		border: none;
+		margin-left: 0.62em;
+		position: relative;
+		top: -0.1em;
+		font-size: 1em;
+		color: var(--color__text__light);
+		font-family: var(--font_family__body);
+		text-transform: uppercase;
+		background-color: transparent;
+		transform-origin: left center;
+		filter: var(--shadow__text_shadow);
+		transition: transform .15s;
+		&:focus {
+			outline: none;
+		}
+		&:hover {
+			cursor: pointer;
+			transform: scale(1.1);
+		}
+		&:not(:hover){
+			transform: scale(1);
+		}
+	}
+
+@media(min-width: 1025px){
+	.container {
+		font-size: 0.62em;
+	}
+}

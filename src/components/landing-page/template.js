@@ -6,6 +6,9 @@ template.innerHTML = `
 	<div class="${s.wrapper}">
 		<h1 class="${s.title}"></h1>
 		<nav class="${s.links}">
+			<mailchimp-signup
+				class="${s.mailchimp}"
+			></mailchimp-signup>
 			<text-links
 				listen="//linktr.ee/laundromat"
 				live="//songkick.com/artists/10085310-laundromat-uk"
@@ -15,6 +18,7 @@ template.innerHTML = `
 				instagram="//instagram.com/laundromat__/"
 				facebook="//facebook.com/laundromatmusica/"
 				twitter="//twitter.com/LAUNDROMAT__"
+				youtube="//youtube.com/channel/UC-luAUHtpoHxTsX60_JSptg"
 			></social-links>
 		</nav>
 		<background-video
@@ -28,6 +32,7 @@ template.innerHTML = `
 			poster-large="assets/images/poster__landscape.jpg"
 		></background-video>
 		<mute-toggle></mute-toggle>
+
 	</div>
 `;
 
