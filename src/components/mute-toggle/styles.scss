@@ -13,6 +13,12 @@
 	}
 }
 
+@media(orientation: landscape) and (max-width: 768px){
+	.wrapper {
+		font-size: 0.5em;
+	}
+}
+
 @media(min-width: 1025px){
 	.wrapper {
 		font-size: 0.62em;
