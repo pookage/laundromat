@@ -26,6 +26,12 @@
 		margin-bottom: 1em;
 	}
 
+@media(orientation: landscape) and (max-width: 768px){
+	.links {
+		font-size: 0.75em;
+	}
+}
+
 @media(min-width: 1025px){
 	.mailchimp {
 		margin-bottom: 0.3844em
