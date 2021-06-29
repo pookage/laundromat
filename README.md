@@ -101,6 +101,8 @@ Once you've made the changes and you're happy with them, you can deploy these ch
 4. Build the site ready for uploading with `npm run build-prod`
 5. Upload the site with `firebase deploy`
 
+> **NOTE: if you're unable to deploy, log out and then log back in again - that usually fixes it.**
+
 ## 4. Sharing your changes (optional)
 
 If you want to share the changes you've made so (ie. if you make changes and want me to have them as well).
