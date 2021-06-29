@@ -4,7 +4,7 @@
 	--font_weight__body: 800;
 	--font_weight__heading: 400;
 	--font_size__body: 1em;
-	--font_size__heading: 2em;
+	--font_size__heading: 1.25em;
 }
 
 body {
@@ -39,6 +39,9 @@ a:visited {
 }
 
 @media(min-width: 1025px){
+	:root {
+		--font_size__heading: 2em;
+	}
 	body {
 		font-size: 30px;
 	}
