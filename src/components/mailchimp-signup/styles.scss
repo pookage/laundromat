@@ -18,7 +18,7 @@
 		text-transform: uppercase;
 		background-color: transparent;
 		transform-origin: left center;
-		filter: var(--shadow__text_shadow);
+		// filter: var(--shadow__text_shadow);
 		transition: transform .15s;
 		&:focus {
 			outline: none;

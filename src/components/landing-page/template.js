@@ -24,10 +24,10 @@ template.innerHTML = `
 		<background-video
 			id="video__background"
 			loop
-			portrait-small="assets/video/LAUNDROMAT_SITE_LOOP_480V.mp4"
-			portrait-large="assets/video/LAUNDROMAT_SITE_LOOP_720V.mp4"
-			landscape-small="assets/video/LAUNDROMAT_SITE_LOOP_720.mp4"
-			landscape-large="assets/video/LAUNDROMAT_SITE_LOOP_1080.mp4"
+			portrait-small="assets/video/laundromat_siteloop_480V.mp4"
+			portrait-large="assets/video/laundromat_siteloop_720V.mp4"
+			landscape-small="assets/video/laundromat_siteloop_720.mp4"
+			landscape-large="assets/video/laundromat_siteloop_1080.mp4"
 			poster-small="assets/images/poster__portrait.jpg"
 			poster-large="assets/images/poster__landscape.jpg"
 		></background-video>

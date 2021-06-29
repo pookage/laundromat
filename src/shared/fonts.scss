@@ -1,17 +1,26 @@
 :root {
 	--font_family__body: tgn-soft-round, sans-serif;
+	--font_family__heading: blackoak-std, serif;
 	--font_weight__body: 800;
+	--font_weight__heading: 400;
 	--font_size__body: 1em;
-	--font_size__heading: 4.25em;
+	--font_size__heading: 2em;
 }
 
 body {
 	font-size: 3.3vw;
 }
 
-h1, p, a, button {
+h1 {
+	font-family: var(--font_family__heading);
+	font-weight: var(--font_weight__heading);
+	color: var(--color__text__light);
+	text-transform: uppercase;
+}
+
+p, a, button {
 	font-family: var(--font_family__body);
-	filter: var(--shadow__text_shadow);
+	// filter: var(--shadow__text_shadow);
 	color: var(--color__text__light);
 	text-transform: uppercase;
 }
