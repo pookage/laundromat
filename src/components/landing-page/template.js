@@ -4,18 +4,25 @@ const template = document.createElement("template");
 
 template.innerHTML = `
 	<div class="${s.wrapper}">
-		<h1 class="${s.title}"></h1>
-		<nav class="${s.links}">
-			<mailchimp-signup
-				class="${s.mailchimp}"
-			></mailchimp-signup>
-			<text-links
-				listen="//linktr.ee/laundromat"
-				live="//songkick.com/artists/10085310-laundromat-uk"
-				store="//laundromatmusica.bandcamp.com/merch"
-			></text-links>
-		</nav>
+		<div class="${s.headings}">
+			<h1 class="${s.title}">
+				Laundromat
+			</h1>
+			<h2 class="${s.subtitle}">
+				A Universal Facepalm
+			</h2>
+		</div>
+		<text-links
+			class="${s.externals}"
+			listen="//linktr.ee/laundromat"
+			live="//songkick.com/artists/10085310-laundromat-uk"
+			store="//laundromatmusica.bandcamp.com/merch"
+		></text-links>
+		<mailchimp-signup
+			class="${s.mailchimp}"
+		></mailchimp-signup>
 		<social-links
+			class="${s.socials}"
 			instagram="//instagram.com/laundromat__/"
 			youtube="//youtube.com/channel/UC-luAUHtpoHxTsX60_JSptg"
 			twitter="//twitter.com/LAUNDROMAT__"
@@ -31,7 +38,9 @@ template.innerHTML = `
 			poster-small="assets/images/poster__portrait.jpg"
 			poster-large="assets/images/poster__landscape.jpg"
 		></background-video>
-		<mute-toggle></mute-toggle>
+		<mute-toggle
+			class="${s.mute}"
+		></mute-toggle>
 
 	</div>
 `;

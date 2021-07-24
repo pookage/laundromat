@@ -1,11 +1,14 @@
+mute-toggle {
+	display: inline-block;
+	font-size: 3.333vw;
+}
+
 .wrapper {
 	display: inline-block;
 	border: none;
-	position: absolute;
-	top: var(--landing_page__padding);
-	right: var(--landing_page__padding);
+	font-size: 1em;
 	background-color: transparent;
-	transform-origin: right center;
+	transform-origin: right top;
 	appearance: none;
 	-webkit-apperance: none;
 	&:focus {
@@ -13,14 +16,14 @@
 	}
 }
 
-@media(orientation: landscape) and (max-width: 768px){
-	.wrapper {
-		font-size: 0.5em;
+@media(orientation: landscape){
+	mute-toggle {
+		font-size: 1.874vw;
 	}
 }
 
 @media(min-width: 1025px){
-	.wrapper {
-		font-size: 0.62em;
+	mute-toggle {
+		font-size: 1.2rem;
 	}
 }

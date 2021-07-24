@@ -1,10 +1,11 @@
 .wrapper {
 	list-style-type: none;
+	font-size: 3.333vw;
 }
 	.item {
 		display: inline-block;
 		& + .item {
-			margin-left: 1.62em;
+			margin-left: 1vw;
 		}
 	}
 		.link {
@@ -14,8 +15,20 @@
 			}
 		}
 
+@media(orientation: landscape){
+	.wrapper {
+		font-size: 1.874vw;
+	}
+		.item + .item {
+			margin-left: 2vw;
+		}
+}
+
 @media(min-width: 1025px){
 	.wrapper {
-		font-size: 0.62em;
+		font-size: 1.2rem;
+	}
+	.item + .item {
+		margin-left: var(--landing_page__padding);
 	}
 }

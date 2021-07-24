@@ -30,28 +30,29 @@ class SocialLinks extends HTMLElement {
 		const fragment = document.createDocumentFragment();
 
 		for(let { name, value } of attributes){
+			if(name !== "class"){
+				// generate clone and get dom elements
+				const clone    = document.importNode(item.content, true);
+				const linkItem = clone.querySelector(`.${s.item}`);
+				const link     = clone.querySelector(`.${s.link}`);
 
-			// generate clone and get dom elements
-			const clone    = document.importNode(item.content, true);
-			const linkItem = clone.querySelector(`.${s.item}`);
-			const link     = clone.querySelector(`.${s.link}`);
+				// add an identifying class name
+				linkItem.classList.add(s[name]);
 
-			// add an identifying class name
-			linkItem.classList.add(s[name]);
+				// capitalise the first letter of the label
+				const [ firstLetter, ...otherLetters ] = name;
+				const label = `${firstLetter.toUpperCase()}${[ ...otherLetters ].join("")}`
 
-			// capitalise the first letter of the label
-			const [ firstLetter, ...otherLetters ] = name;
-			const label = `${firstLetter.toUpperCase()}${[ ...otherLetters ].join("")}`
+				// set the label as an aria-label instead of a child so that we can use an icon instead
+				link.setAttribute("aria-label", `${label}.`);
 
-			// set the label as an aria-label instead of a child so that we can use an icon instead
-			link.setAttribute("aria-label", `${label}.`);
+				// disable it if there's no url
+				if(!value) link.setAttribute("aria-disabled", "true");
+				// otherwise attach the url as a href
+				else link.href = value;
 
-			// disable it if there's no url
-			if(!value) link.setAttribute("aria-disabled", "true");
-			// otherwise attach the url as a href
-			else link.href = value;
-
-			fragment.appendChild(clone);
+				fragment.appendChild(clone);
+			}
 		}
 
 		return fragment;

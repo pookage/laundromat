@@ -4,42 +4,51 @@
 	width: 100%;
 	padding: 2em;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: center;
 	align-items: center;
 	text-align: center;
 
 	--landing_page__padding: 1.6rem;
 }
-	.title {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		font-size: var(--font_size__heading);
-		&::first-letter {
-			// letter-spacing: 0.05em;
-		}
+	.headings {
+		position: relative;
 	}
-	.links {
-		font-size: 1.1em;	
+		.title {
+			font-size: var(--font_size__heading);
+		}
+		.subtitle {
+			position: absolute;
+			bottom: 0;
+			right:  0; 
+			font-size: 0.28em;
+			font-family: var(--font_family__body);
+			text-transform: uppercase;
+			color: var(--color__text__light);
+			font-weight: 400;
+		}
+	.externals {
+		position: absolute;
+		bottom: var(--landing_page__padding);
+		left:   var(--landing_page__padding);
 	}
 	.mailchimp {
-		display: block;
-		margin-bottom: 1em;
+		position: absolute;
+		bottom: var(--landing_page__padding);
+		right:  var(--landing_page__padding);
 	}
-
-@media(orientation: landscape) and (max-width: 768px){
-	.links {
-		font-size: 0.5em;
+	.socials {
+		position: absolute;
+		top:  var(--landing_page__padding);
+		left: var(--landing_page__padding);
 	}
-}
+	.mute {
+		position: absolute;
+		top:   var(--landing_page__padding);
+		right: var(--landing_page__padding);
+	}
 
 @media(min-width: 1025px){
 	.wrapper {
 		--landing_page__padding: 1rem;
-	}
-
-	.mailchimp {
-		margin-bottom: 0.3844em
 	}
 }
