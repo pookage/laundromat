@@ -7,6 +7,8 @@
 	justify-content: flex-end;
 	align-items: center;
 	text-align: center;
+
+	--landing_page__padding: 1.6rem;
 }
 	.title {
 		position: absolute;
@@ -33,6 +35,10 @@
 }
 
 @media(min-width: 1025px){
+	.wrapper {
+		--landing_page__padding: 1rem;
+	}
+
 	.mailchimp {
 		margin-bottom: 0.3844em
 	}

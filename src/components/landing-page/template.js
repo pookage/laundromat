@@ -14,13 +14,13 @@ template.innerHTML = `
 				live="//songkick.com/artists/10085310-laundromat-uk"
 				store="//laundromatmusica.bandcamp.com/merch"
 			></text-links>
-			<social-links
-				instagram="//instagram.com/laundromat__/"
-				facebook="//facebook.com/laundromatmusica/"
-				twitter="//twitter.com/LAUNDROMAT__"
-				youtube="//youtube.com/channel/UC-luAUHtpoHxTsX60_JSptg"
-			></social-links>
 		</nav>
+		<social-links
+			instagram="//instagram.com/laundromat__/"
+			youtube="//youtube.com/channel/UC-luAUHtpoHxTsX60_JSptg"
+			twitter="//twitter.com/LAUNDROMAT__"
+			facebook="//facebook.com/laundromatmusica/"
+		></social-links>
 		<background-video
 			id="video__background"
 			loop

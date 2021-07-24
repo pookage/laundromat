@@ -2,8 +2,8 @@
 	display: inline-block;
 	border: none;
 	position: absolute;
-	top: 1rem;
-	right: 1rem;
+	top: var(--landing_page__padding);
+	right: var(--landing_page__padding);
 	background-color: transparent;
 	transform-origin: right center;
 	appearance: none;
