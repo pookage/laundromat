@@ -34,20 +34,22 @@ class TextLinks extends HTMLElement {
 
 		for(let { name, value } of attributes){
 
-			// create a new list item from the template
-			const linkItem = document.importNode(item.content, true);
-			const link = linkItem.querySelector(`.${s.link}`);
+			if(name !== "class"){
+				// create a new list item from the template
+				const linkItem = document.importNode(item.content, true);
+				const link = linkItem.querySelector(`.${s.link}`);
 
-			// capitalise the first letter of the label
-			const [ firstLetter, ...otherLetters ] = name;
-			const label = `${firstLetter.toUpperCase()}${[ ...otherLetters ].join("")}`
+				// capitalise the first letter of the label
+				const [ firstLetter, ...otherLetters ] = name;
+				const label = `${firstLetter.toUpperCase()}${[ ...otherLetters ].join("")}`
 
-			if(!value) link.setAttribute("aria-disabled", "true");
+				if(!value) link.setAttribute("aria-disabled", "true");
 
-			link.href = value;
-			link.innerText = label;
+				link.href = value;
+				link.innerText = label;
 
-			fragment.appendChild(linkItem);
+				fragment.appendChild(linkItem);
+			}
 		}
 
 		return fragment;

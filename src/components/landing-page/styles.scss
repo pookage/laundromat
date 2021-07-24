@@ -8,7 +8,7 @@
 	align-items: center;
 	text-align: center;
 
-	--landing_page__padding: 1.6rem;
+	--landing_page__padding: 1rem;
 }
 	.headings {
 		position: relative;
@@ -20,6 +20,7 @@
 			position: absolute;
 			bottom: 0;
 			right:  0; 
+			transform: translateY(50%);
 			font-size: 0.28em;
 			font-family: var(--font_family__body);
 			text-transform: uppercase;
@@ -47,8 +48,21 @@
 		right: var(--landing_page__padding);
 	}
 
+@media(min-width: 768px){
+	.wrapper {
+		--landing_page__padding: 1.6rem;
+	}
+		.subtitle {
+			font-size: 0.3em;
+			transform: translateY(25%);
+		}
+}
+
 @media(min-width: 1025px){
 	.wrapper {
 		--landing_page__padding: 1rem;
 	}
+		.subtitle {
+			transform: translateY(10%);
+		}
 }
